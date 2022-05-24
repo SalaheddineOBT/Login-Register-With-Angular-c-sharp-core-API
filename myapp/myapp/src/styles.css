@@ -1,0 +1,29 @@
+*{
+    letter-spacing: 0;
+    outline: none;
+    padding: 0;margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+}
+.title{
+    color: #302e2e;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    padding-bottom: .5rem;
+    text-align: center;
+}
+.container{
+    width: 90%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.space{
+    padding: 1rem;
+}

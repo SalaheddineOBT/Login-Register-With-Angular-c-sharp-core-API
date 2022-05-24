@@ -1,0 +1,48 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+nav a{
+	font-size: 1rem;
+	font-family: sans-serif;
+	background-color: white;
+	border: 2px solid #11699c;
+	letter-spacing: 0.1em;
+    color: #11699c;
+	width: 7rem;
+	height: 1em;
+	line-height: 1.5em;
+	position: relative;
+	overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+	cursor: pointer;
+}
+nav a::before {
+	content: '';
+	position: absolute;
+	height: inherit;
+    width: 0;
+	background-color: #11699c27;
+	border-radius: 50%;
+	top: 0;
+	left: -0.75em;
+	transition: 0.5s ease-out;
+}
+nav a.active::before,
+nav a:hover::before {
+	width: 100%;
+	transform: scale(7);
+}
