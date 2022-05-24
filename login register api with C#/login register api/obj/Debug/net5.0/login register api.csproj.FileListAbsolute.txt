@@ -1,0 +1,36 @@
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\appsettings.json
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\login register api.exe
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\login register api.deps.json
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\login register api.runtimeconfig.json
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\login register api.runtimeconfig.dev.json
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\login register api.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\ref\login register api.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\login register api.pdb
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.csprojAssemblyReference.cache
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.AssemblyInfoInputs.cache
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.AssemblyInfo.cs
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.csproj.CoreCompileInputs.cache
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\staticwebassets\login register api.StaticWebAssets.Manifest.cache
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\staticwebassets\login register api.StaticWebAssets.xml
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\scopedcss\bundle\login register api.styles.css
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.RazorTargetAssemblyInfo.cache
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.csproj.CopyComplete
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\ref\login register api.dll
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.pdb
+C:\Users\omar2\Desktop\Simple Login & Register Form With Angular\login register api\login register api\obj\Debug\net5.0\login register api.genruntimeconfig.cache
