@@ -42,12 +42,12 @@ export class LoginComponent implements OnInit {
     let password=this.password?.value;
     if(email && password){
         var passwordHash=crypto.AES.encrypt(password,this.key).toString();
-        let map = new Map<string,string>(); 
-        map.set('email', email);
-        map.set('password', passwordHash);
-        const result = Object.fromEntries(map);
-        this.connectionService.login(result).subscribe(res => console.log(res), err => console.log(err));
-        this.loginForm=[];
+        let map={
+            email:email,
+            password:passwordHash,
+        }
+        this.connectionService.login(map).subscribe(res => console.log(res), err => console.log(err));
+        this.ngOnInit();
     }
   }
 }

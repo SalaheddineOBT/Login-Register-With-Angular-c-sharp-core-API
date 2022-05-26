@@ -49,15 +49,15 @@ export class RegisterComponent implements OnInit {
         if(email && password && confirmPass && username){
             if(password === confirmPass){
                 var passwordHash=crypto.AES.encrypt(confirmPass,this.key).toString();
-                let map = new Map<string,string>(); 
-                map.set('email', email);
-                map.set('password', passwordHash);
-                map.set('username', username);
-                map.set('type', type);
-                const result = Object.fromEntries(map);
-                console.log(result);
-                this.connectionService.register(result).subscribe(res => console.log(res),err => console.log(err));
-                this.registerForm=[];
+                let map={
+                    username:username,
+                    email:email,
+                    password:passwordHash,
+                    type:type
+                }
+                console.log(map);
+                //this.connectionService.register(map).subscribe(res => console.log(res),err => console.log(err));
+                this.ngOnInit();
             }
         }
     };
