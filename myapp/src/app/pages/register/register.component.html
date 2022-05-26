@@ -1,0 +1,47 @@
+<app-nave></app-nave>
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h2 class="title">Register Form</h2>
+        <div class="input-group">
+            <input formControlName="username" [class.errorInput]="username?.invalid && username?.touched" required type="text" name="text" autocomplete="off" class="input">
+            <label class="user-label">User Name</label>
+            <div *ngIf="username?.invalid && username?.touched">
+                <small [style.color]="'red'" *ngIf="username?.errors?.['required']" >User Name Is Required !</small>
+                <small [style.color]="'red'" *ngIf="username?.errors?.['minlength']" >User Name Must Be At Least 5 Characters !</small>
+            </div>
+        </div>
+        <div class="input-group">
+            <input formControlName="email" required [class.errorInput]="email?.invalid && email?.touched" type="text" name="text" autocomplete="off" class="input">
+            <label class="user-label">Email</label>
+            <div *ngIf="email?.invalid && email?.touched">
+                <small [style.color]="'red'" *ngIf="email?.errors?.['required']" >Email Is Required !</small>
+                <small [style.color]="'red'" *ngIf="email?.errors?.['pattern']" >Email Format Is Incorrect !</small>
+            </div>
+        </div>
+        <div class="input-group">
+            <input formControlName="password" [class.errorInput]="password?.invalid && password?.touched" required type="password" name="text" autocomplete="off" class="input">
+            <label class="user-label">Password</label>
+            <div *ngIf="password?.invalid && password?.touched">
+                <small [style.color]="'red'" *ngIf="password?.errors?.['required']" >Password Is Required !</small>
+                <small [style.color]="'red'" *ngIf="password?.errors?.['minlength']" >Password Must Be At Least 8 Characters !</small>
+            </div>
+        </div>
+        <div class="input-group">
+            <input formControlName="confirm" [class.errorInput]="confirm?.invalid && confirm?.touched" required type="password" name="text" autocomplete="off" class="input">
+            <label class="user-label">Confirm Password</label>
+            <small [style.color]="'red'" *ngIf="(confirm?.invalid && confirm?.touched) && confirm?.errors?.['required']" >Confirm Password Is Required !</small>
+            <small [style.color]="'red'" *ngIf="registerForm.errors?.['misMatch']" >Confirm Password Is Incorrect !</small>
+        </div>
+        <div class="input-group">
+            <select [class.errorInput]="type?.invalid && type?.touched" formControlName="type"  required class="input" (change)="changing($event)">
+                <option></option>
+                <option *ngFor="let item of types">{{item}}</option>
+            </select>
+            <label class="user-label" [ngClass]="['cls','eee']" [class.top]="act">Account Type</label>
+            <small [style.color]="'red'" *ngIf="(type?.invalid && type?.touched) && type?.errors?.['required']" >Select Account Type !</small>
+        </div>
+        <br />
+        <button [disabled]="!registerForm.valid" [class.disable]="!registerForm.valid" > Register ! </button>
+    </form>
+</div>
+<!-- {{registerForm.value | json}} -->

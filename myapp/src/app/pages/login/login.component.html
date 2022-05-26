@@ -1,0 +1,33 @@
+<app-nave></app-nave>
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h2 class="title">Login Form</h2>
+        <div class="input-group">
+            <input formControlName="email" required [class.errorInput]="(email?.invalid && email?.touched) || email?.errors?.['pattern']" type="text" name="text" autocomplete="off" class="input">
+            <label class="user-label">Email</label>
+            <div *ngIf="(email?.invalid && email?.touched) || email?.dirty">
+                <small [style.color]="'red'" *ngIf="email?.errors?.['required']" >Email Is Required !</small>
+                <small [style.color]="'red'" *ngIf="email?.errors?.['pattern']">Email Format Incorrect !</small>
+            </div>
+        </div>
+        <!-- [class.errorInput]="type.invalid && type?.touched" -->
+
+        <div class="input-group">
+            <input formControlName="password" [class.errorInput]="password?.invalid && password?.touched" required type="password" name="text" autocomplete="off" class="input">
+            <label class="user-label">Password</label>
+            <div *ngIf="password?.invalid && password?.touched">
+                <small [style.color]="'red'" *ngIf="password?.errors?.['required']" >Password Is Required !</small>
+                <small [style.color]="'red'" *ngIf="password?.errors?.['minlength']">Password Must At Least 8 Characters !</small>
+            </div>
+        </div>
+        <div class="chbx">
+            <label class="cont">
+                <input type="checkbox" formControlName="remember">
+                <span></span>
+            </label>
+            <span class="text">Remember Me ?</span>
+        </div>
+        <button [disabled]="!loginForm.valid" [class.disable]="!loginForm.valid" > Login ! </button>
+        <!-- {{loginForm.value | json}} -->
+    </form>
+</div>
