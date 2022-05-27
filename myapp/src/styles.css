@@ -27,3 +27,13 @@
 .space{
     padding: 1rem;
 }
+.navvv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+.navvv a{
+    margin-left: .3rem;
+    color: #0f2d8f;
+}

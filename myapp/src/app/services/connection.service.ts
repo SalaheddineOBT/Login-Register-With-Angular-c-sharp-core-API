@@ -13,28 +13,14 @@ export class ConnectionService{
     constructor(private _httpClient : HttpClient){ };
 
     login(user:any):Observable<any>{
-        return this._httpClient.post<any>(this._url+'login',user,{
-            headers:this.headers
-        });
+        return this._httpClient.post<any>(this._url+'login',user);
     };
 
     register(user:any):Observable<IUser>{
-        return this._httpClient.post<IUser>(this._url+'signup',user,{
-            headers:this.headers,
-        }).pipe(
+        return this._httpClient.post<IUser>(this._url+'signup',user).pipe(
             map(data => { return data; }),
-            catchError(error => throwError(error.message || "Error In The Server !"))
+            catchError(error => throwError("Error In The Server !"))
         );
     };
-
-    public headers = new HttpHeaders(
-        {
-            'Content-Type':'application/json',
-            'Accept':'application/json',
-            'Access-Control-Allow-Origin':'https://localhost:44331',
-            'Access-Control-Allow-Credentials':'true',
-            //'Authorization':'Bearer token'
-        }
-    );
 
 }

@@ -26,7 +26,6 @@ export class RegisterComponent implements OnInit {
     registerForm:any = [];
     
     ngOnInit(): void {
-        //this.registerForm.valueChanges.subscribe(console.log);
 
         this.registerForm = this.fb.group({
             username : ['',[Validators.required,Validators.minLength(5)]],
@@ -35,6 +34,9 @@ export class RegisterComponent implements OnInit {
             confirm : ['',Validators.required],
             type : ['']
           },{ validator : PasswordValidator });
+
+          
+        //this.registerForm.valueChanges.subscribe(console.log);
     }
 
     changing = (val:Event) =>  (val.target as any).value === "" ? this.act=false : this.act=true;
@@ -48,7 +50,7 @@ export class RegisterComponent implements OnInit {
         let type=this.type?.value;
         if(email && password && confirmPass && username){
             if(password === confirmPass){
-                var passwordHash=crypto.AES.encrypt(confirmPass,this.key).toString();
+                let passwordHash=btoa(password);
                 let map={
                     username:username,
                     email:email,
@@ -56,7 +58,7 @@ export class RegisterComponent implements OnInit {
                     type:type
                 }
                 console.log(map);
-                //this.connectionService.register(map).subscribe(res => console.log(res),err => console.log(err));
+                this.connectionService.register(map).subscribe(res => console.log(res),err => console.log(err));
                 this.ngOnInit();
             }
         }

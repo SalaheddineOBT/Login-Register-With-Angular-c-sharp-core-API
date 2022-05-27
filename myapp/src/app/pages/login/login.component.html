@@ -1,4 +1,3 @@
-<app-nave></app-nave>
 <div class="container">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <h2 class="title">Login Form</h2>
@@ -27,7 +26,12 @@
             </label>
             <span class="text">Remember Me ?</span>
         </div>
+        <div class="navvv">
+            <span>Dont't Have Account ?</span>
+            <a routerLink="/register">SignUp</a>
+        </div>
         <button [disabled]="!loginForm.valid" [class.disable]="!loginForm.valid" > Login ! </button>
         <!-- {{loginForm.value | json}} -->
     </form>
 </div>
+<simple-notifications></simple-notifications>

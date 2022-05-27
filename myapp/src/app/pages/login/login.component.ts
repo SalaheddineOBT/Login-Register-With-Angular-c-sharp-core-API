@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as crypto from 'crypto-js';
 import { ConnectionService } from '../../services/connection.service';
+import { NotificationsService } from 'angular2-notifications';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +12,8 @@ import { ConnectionService } from '../../services/connection.service';
 })
 
 export class LoginComponent implements OnInit {
-  constructor(private fb : FormBuilder, private connectionService : ConnectionService) { }
-  private key:any='#@QWERTY$!&/&!AZERTY@#';
+  constructor(private router:Router,private services : NotificationsService,private fb : FormBuilder, private connectionService : ConnectionService) { }
+  //private key:any='#@QWERTY$!&/&!AZERTY@#';
 //   loginForm=new FormGroup({
 //       email : new FormControl(''),
 //       password : new FormControl(''),
@@ -41,13 +43,58 @@ export class LoginComponent implements OnInit {
     let email=this.email?.value;
     let password=this.password?.value;
     if(email && password){
-        var passwordHash=crypto.AES.encrypt(password,this.key).toString();
+        var passwordHash=btoa(password);
         let map={
             email:email,
             password:passwordHash,
         }
-        this.connectionService.login(map).subscribe(res => console.log(res), err => console.log(err));
-        this.ngOnInit();
+        this.connectionService.login(map).subscribe(res =>{
+            //this.onSuccess(res.message);
+            this.navigate(res.username);
+        }, err => this.onError('User Not Found !'));
+        //this.ngOnInit();
     }
   }
+//   if(res.status === 200){
+//     this.onSuccess(res.message);
+//     this.username=res.username
+// }else
+//     this.onError(res.message);
+
+  onSuccess(message:any){
+    this.services.success('Success',message,{
+        position: ["top"],
+        timeOut: 5000,
+        animate:'fade',
+        showProgressBar: false,
+        pauseOnHover: true,
+        clickToClose: true,
+        clickIconToClose: true
+    });
+  }
+  onError(message:any){
+    this.services.error('Error',message,{
+        position: ["top"],
+        timeOut: 5000,
+        animate:'fade',
+        showProgressBar: false,
+        pauseOnHover: true,
+        clickToClose: true,
+        clickIconToClose: true
+    });
+  }
+
+    navigate(nm:any){
+        var username=btoa(nm);
+        this.setCookie("username", username, 30);
+        this.router.navigate(['/home']);
+    }
+
+    setCookie(cname:any,cvalue:any,exdays:any) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
 }

@@ -1,4 +1,3 @@
-<app-nave></app-nave>
 <div class="container">
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <h2 class="title">Register Form</h2>
@@ -34,13 +33,16 @@
         </div>
         <div class="input-group">
             <select [class.errorInput]="type?.invalid && type?.touched" formControlName="type"  required class="input" (change)="changing($event)">
-                <option></option>
+                <option value=""></option>
                 <option *ngFor="let item of types">{{item}}</option>
             </select>
             <label class="user-label" [ngClass]="['cls','eee']" [class.top]="act">Account Type</label>
             <small [style.color]="'red'" *ngIf="(type?.invalid && type?.touched) && type?.errors?.['required']" >Select Account Type !</small>
         </div>
-        <br />
+        <div class="navvv">
+            <span>Dont't Have Account ?</span>
+            <a routerLink="/login">SignIn</a>
+        </div>
         <button [disabled]="!registerForm.valid" [class.disable]="!registerForm.valid" > Register ! </button>
     </form>
 </div>
