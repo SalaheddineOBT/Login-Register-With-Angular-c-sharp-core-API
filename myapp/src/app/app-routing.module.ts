@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarsComponent } from './components/cars/cars.component';
+import { SavesComponent } from './components/saves/saves.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
@@ -14,7 +16,16 @@ const routes: Routes = [
         component : RegisterComponent
     },{
         path : 'home',
-        component : HomeComponent
+        component : HomeComponent,
+        children:[
+            {
+                path : 'cars',
+                component : CarsComponent
+            },{
+                path : 'saves',
+                component : SavesComponent
+            },
+        ]
     },{
         path : '',
         redirectTo : '/login',
@@ -34,5 +45,7 @@ export const routingComponents = [
     PagenotfoundComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SavesComponent,
+    CarsComponent
 ]

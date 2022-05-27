@@ -8,12 +8,15 @@ import { NaveComponent } from './components/nave/nave.component';
 import { ConnectionService } from './services/connection.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/header/header.component';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    NaveComponent
+    NaveComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule
   ],
   providers: [
-      ConnectionService
+      ConnectionService,
+      ApiService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,41 @@
+.container-fluid span{
+    padding: .2rem;
+    width: 6rem;
+    text-align: center;
+    margin: .5rem;
+    border-radius: .1rem;
+    border:1px solid #000;
+    cursor: pointer;
+}
+.container-fluid span:hover{
+    background-color: rgba(0, 0, 0, 0.527);
+    color: #fff;
+}
+.container-fluid{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    padding: 2rem;
+    margin: 15px;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+    transition: .3s ease-in-out;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.card:hover img{
+    transition: .3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.row,.container{
+    margin-top: 0!important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
